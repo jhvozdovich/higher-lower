@@ -10,7 +10,6 @@ public class HighLow
     decimal lowest = 1;
     decimal averageCalc = 50;
     decimal newGuess = 50;
-    int average = Convert.ToInt32(averageCalc);
     string gameResponse = "";
     while (gameResponse != "Correct" || gameResponse != "correct")
       {
@@ -21,14 +20,12 @@ public class HighLow
           lowest = newGuess;
           averageCalc = Math.Round(((highest - lowest) / 2));
           newGuess = lowest + averageCalc;
-          average = Convert.ToInt32(averageCalc);
         }
         else if (gameResponse == "lower" || gameResponse == "Lower")
         {
           highest = newGuess;
           averageCalc = Math.Round(((highest - lowest) / 2));
           newGuess = highest - averageCalc;
-          average = Convert.ToInt32(averageCalc);
         }
         else
         {
@@ -55,13 +52,3 @@ public class HighLow
     } 
   }
 }
-
-
-
-// if higher than #{
-// highest # = 
-// return (((highest # - lowest #)/2)+lowest #)  
-// }
-// else if lower than #{
-//   return (((highest # - lowest #)/2)+lowest #)
-// }
